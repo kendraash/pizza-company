@@ -1,3 +1,10 @@
 #result {
   display: none;
 }
+
+.button {
+    padding-left: 10px;
+}
+button {
+    margin-right: .5em;
+}
