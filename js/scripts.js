@@ -58,6 +58,6 @@ $(document).ready(function(event) {
      $("select#new-pizza-quantity").find("option:first").attr("selected", "selected");
      $("select#new-pizza-size").find("option:first").attr("selected", "selected");
      $(".input-topping").val("");
-    //  $("#add-toppings-form").hide();
+     $("#add-toppings-form").hide();
   });
 });
