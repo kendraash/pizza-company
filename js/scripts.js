@@ -38,8 +38,8 @@ $(document).ready(function(event) {
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
 
-    var inputQuantity = $("select#new-pizza-quantity option:selected");
-    var inputSize = $("select#new-pizza-size option:selected");
+    var inputQuantity = $("select#new-pizza-quantity option:selected").val();
+    var inputSize = $("select#new-pizza-size option:selected").val();
     var newPizza = new Pizza(inputQuantity, inputSize);
 
     $(".add-toppings").each(function() {
@@ -47,6 +47,11 @@ $(document).ready(function(event) {
 
       newPizza.addTopping(newTopping);
     });
+    newPizza.calculatedCost();
+  
 
+     $('#pizza-confirmation').text('Price for:  ' + newPizza.quantity + " " + newPizza.pizzaSize + " pizzas with  " + newPizza.toppings.join(", ") + " will cost: $" + newPizza.price);
   });
+
+
 });

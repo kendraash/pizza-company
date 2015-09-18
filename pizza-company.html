@@ -15,6 +15,7 @@
         <div class = "container">
           <form  id = "new-pizza-order" class="form-group">
             <div class = "col-md-6">
+              <label class="form-label" for="quantity">Quantity:</label>
               <select class="form-control" id="new-pizza-quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -24,7 +25,8 @@
               </select>
             </div>
             <div class = "col-md-6">
-              <select class="form-control" id="new-pizza-quantity">
+              <label class="form-label" for="pizzaSize">Size:</label>
+              <select class="form-control" id="new-pizza-size">
                 <option value="sm">Small</option>
                 <option value="md">Medium</option>
                 <option value="lg">Large</option>
@@ -46,7 +48,7 @@
       </div>
     </div>
     <div class='well'>
-      <span id='pizza-confirmation' </span>
+      <h3><span id='pizza-confirmation' </span></h3>
     </div>
 
   </body>
