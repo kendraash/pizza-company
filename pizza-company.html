@@ -11,9 +11,6 @@
       <div class = "row">
         <h1 align='center'>Pizza Order!!</h1>
       </div>
-      <div class="col-md-6">
-        <ul id = "pizzas"></ul>
-      </div>
         <div class = "container">
           <form  id = "new-pizza-order" class="form-group">
             <div class = "col-md-3">
@@ -34,7 +31,7 @@
                 <option value="lg">Large</option>
               </select> <br>
               <div id="toppings">
-                <div class="form-group add-toppings" id="add-toppings-form">
+                <div class="form-group add-toppings">
                   <label class="form-label" for="topping">Toping:</label>
                   <input class="form-control input-topping" name="topping">
                 </div>
@@ -45,11 +42,14 @@
               </div>
               </div>
             </form>
-            <button  class="btn btn-xs btn-warning" id="add-another-topping" name="addAnotherTopping">Add another topping</button>
+            <div class="col-md-2">
+              <button  class="btn btn-xs btn-warning" id="add-another-topping" name="addAnotherTopping">Add another topping</button>
+            </div>
+            <div class="col-md-4">
+              <ul id = "pizzas"></ul>
+            </div>
         </div>
-
     </div>
-
     <div class='well'>
       <h3><span id='pizza-confirmation'</span></h3>
     </div>
