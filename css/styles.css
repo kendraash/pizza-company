@@ -1,9 +1,7 @@
-#result {
-  display: none;
-}
 
 .button {
     padding-left: 10px;
+    padding-top: 100;
 }
 button {
     margin-right: .5em;

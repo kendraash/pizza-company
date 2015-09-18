@@ -24,16 +24,18 @@ Pizza.prototype.calculatedCost = function () {
   this.price = this.quantity * (price + toppingPrice);
 }
 
+
 $(document).ready(function(event) {
 
   $("#add-another-topping").click(function() {
     $("#toppings").append(
-      '<div class="form-group add-toppings">' +
+      '<div class="form-group add-toppings id="add-toppings-form">' +
       '<label class="form-label" for="topping">Toping:</label>' +
       '<input class="form-control input-topping" name="topping">' +
       '</div>'
     );
   });
+
 
   $("form#new-pizza-order").submit(function(event) {
     event.preventDefault();
@@ -47,11 +49,14 @@ $(document).ready(function(event) {
 
       newPizza.addTopping(newTopping);
     });
+
     newPizza.calculatedCost();
-  
 
      $('#pizza-confirmation').text('Price for:  ' + newPizza.quantity + " " + newPizza.pizzaSize + " pizzas with  " + newPizza.toppings.join(", ") + " will cost: $" + newPizza.price);
+
+     $("#pizzas").append("<li>" + newPizza.quantity + ", " + newPizza.pizzaSize + " pizza: $" + newPizza.price +"</li>");
+
+     $("#add-toppings-form").hide();
+
   });
-
-
 });

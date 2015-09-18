@@ -7,14 +7,19 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-
-
     <div class="jumbotron">
       <h1 align='center'>Pizza Order!!</h1><br>
-      <div class = "row">
+      <div class="col-md-6">
+        <div class = "row"> </div>
+        <div class="col-md-6">
+          <ul id = "pizzas">
+
+          </ul>
+        </div>
+      </div>
         <div class = "container">
           <form  id = "new-pizza-order" class="form-group">
-            <div class = "col-md-6">
+            <div class = "col-md-3">
               <label class="form-label" for="quantity">Quantity:</label>
               <select class="form-control" id="new-pizza-quantity">
                 <option value="1">1</option>
@@ -23,8 +28,12 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
+              <br>
+              <div class="button" id="button">
+                <button  type = "button" align="right" name="submit" class='btn btn-primary btn-lg'>Place Order!</button>
+              </div>
             </div>
-            <div class = "col-md-6">
+            <div class = "col-md-3">
               <label class="form-label" for="pizzaSize">Size:</label>
               <select class="form-control" id="new-pizza-size">
                 <option value="sm">Small</option>
@@ -37,13 +46,9 @@
                   <input class="form-control input-topping" name="topping">
                 </div>
               </div>
-              <button class="btn btn-xs" id="add-another-topping" name="addAnotherTopping">Add another topping</button>
-            </div>
-              <br>
-              <div class="button" id="button">
-                <button  align="right" name="submit" class='btn btn-primary btn-lg'>Place Order!</button>
-            </div>
-          </form>
+            </form>
+            <button  class="btn btn-xs btn-warning" id="add-another-topping" name="addAnotherTopping">Add another topping</button>
+          </div>
         </div>
       </div>
     </div>
