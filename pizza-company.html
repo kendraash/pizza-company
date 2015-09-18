@@ -8,14 +8,11 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1 align='center'>Pizza Order!!</h1><br>
+      <div class = "row">
+        <h1 align='center'>Pizza Order!!</h1>
+      </div>
       <div class="col-md-6">
-        <div class = "row"> </div>
-        <div class="col-md-6">
-          <ul id = "pizzas">
-
-          </ul>
-        </div>
+        <ul id = "pizzas"></ul>
       </div>
         <div class = "container">
           <form  id = "new-pizza-order" class="form-group">
@@ -28,10 +25,6 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <br>
-              <div class="button" id="button">
-                <button  type = "button" align="right" name="submit" class='btn btn-primary btn-lg'>Place Order!</button>
-              </div>
             </div>
             <div class = "col-md-3">
               <label class="form-label" for="pizzaSize">Size:</label>
@@ -46,14 +39,19 @@
                   <input class="form-control input-topping" name="topping">
                 </div>
               </div>
+              <br>
+              <div class="button" id="button">
+                <button class='btn btn-primary btn-lg' align="right" type="submit" name="add-pizza-order">Place Order!</button>
+              </div>
+              </div>
             </form>
             <button  class="btn btn-xs btn-warning" id="add-another-topping" name="addAnotherTopping">Add another topping</button>
-          </div>
         </div>
-      </div>
+
     </div>
+
     <div class='well'>
-      <h3><span id='pizza-confirmation' </span></h3>
+      <h3><span id='pizza-confirmation'</span></h3>
     </div>
 
   </body>

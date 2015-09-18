@@ -43,20 +43,21 @@ $(document).ready(function(event) {
     var inputQuantity = $("select#new-pizza-quantity option:selected").val();
     var inputSize = $("select#new-pizza-size option:selected").val();
     var newPizza = new Pizza(inputQuantity, inputSize);
-
+    // add each topping to array
     $(".add-toppings").each(function() {
       var newTopping = $(this).find(".input-topping").val();
-
       newPizza.addTopping(newTopping);
     });
-
+    // get price
     newPizza.calculatedCost();
-
+    // add to ul list
      $('#pizza-confirmation').text('Price for:  ' + newPizza.quantity + " " + newPizza.pizzaSize + " pizzas with  " + newPizza.toppings.join(", ") + " will cost: $" + newPizza.price);
 
      $("#pizzas").append("<li>" + newPizza.quantity + ", " + newPizza.pizzaSize + " pizza: $" + newPizza.price +"</li>");
-
-     $("#add-toppings-form").hide();
-
+     // clear fields
+     $("select#new-pizza-quantity").find("option:first").attr("selected", "selected");
+     $("select#new-pizza-size").find("option:first").attr("selected", "selected");
+     $(".input-topping").val("");
+    //  $("#add-toppings-form").hide();
   });
 });
