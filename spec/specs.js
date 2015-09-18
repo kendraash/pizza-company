@@ -10,4 +10,12 @@ describe('Pizza', function() {
     testPizza.addTopping("cheese");
     expect(testPizza.toppings).to.eql(["cheese"]);
   })
+  it('returns the cost of the pizza based on size, quantity, number of toppings', function() {
+    var testPizza = new Pizza(2, "sm");
+    testPizza.addTopping("Cheese");
+    testPizza.addTopping("Bacon");
+    testPizza.addTopping("Pineapple");
+    testPizza.calculatedCost();
+    expect(testPizza.price).to.equal(22);
+  });
 });

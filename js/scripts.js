@@ -8,6 +8,22 @@ Pizza.prototype.addTopping = function(topping) {
   this.toppings.push(topping);
 }
 
+Pizza.prototype.calculatedCost = function () {
+  var price;
+  if(this.pizzaSize === "sm")
+    price = 10;
+  else if (this.pizzaSize === "md")
+      price = 12;
+  else
+    price = 14;
+
+  var toppingPrice = 0;
+  for(var i = 1; i <= (this.toppings.length - 2); i++) {
+    toppingPrice = toppingPrice + 1;
+  }
+  this.price = this.quantity * (price + toppingPrice);
+}
+
 $(document).ready(function(event) {
 
   $("#add-another-topping").click(function() {
