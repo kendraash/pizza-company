@@ -5,4 +5,9 @@ describe('Pizza', function() {
     expect(testPizza.pizzaSize).to.equal("sm");
     expect(testPizza.toppings).to.eql([]);
   });
+  it('adds a topping to the array of toppings for a pizza', function() {
+    var testPizza = new Pizza(2, "sm");
+    testPizza.addTopping("cheese");
+    expect(testPizza.toppings).to.eql(["cheese"]);
+  })
 });
