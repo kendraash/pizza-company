@@ -5,7 +5,7 @@
 #### By _**Kendra Ash**_
 
 ## Description
-This application takes two inputs of type string. The first is a pizza size followed by a list of the toppings the user would like on their pizza. The output is also a of type string and tells the user the price for the pizza.
+This application takes two inputs of type string and a third of type integer. The first is how many pizzas of this type, followed by a list of the toppings the user would like on their pizza. Lastly the size of the pizza. The output is of type string and tells the user the price for the pizza.
 
 
 _Users can:_
